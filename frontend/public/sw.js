@@ -1,7 +1,16 @@
-const SHELL = "rootwise-shell-v2";
-const RUNTIME = "rootwise-runtime-v2";
-const DATA_PREFIX = "rootwise-data-v2-";
-const SHELL_FILES = ["/", "/index.html", "/manifest.webmanifest", "/icon.svg"];
+const SHELL = "rootwise-shell-v3";
+const RUNTIME = "rootwise-runtime-v3";
+const DATA_PREFIX = "rootwise-data-v3-";
+const SHELL_FILES = [
+  "/",
+  "/index.html",
+  "/manifest.webmanifest",
+  "/icon.svg",
+  "/logo-emblem.png",
+  "/logo-nav.png",
+  "/logo-lockup.png",
+  "/logo-icon-192.png",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

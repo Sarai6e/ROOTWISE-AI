@@ -3,34 +3,35 @@ import { X } from "lucide-react";
 import type { ButtonHTMLAttributes, InputHTMLAttributes, ReactNode, SelectHTMLAttributes, TextareaHTMLAttributes } from "react";
 
 export function Logo({ compact = false, light = false }: { compact?: boolean; light?: boolean }) {
+  if (compact) {
+    return (
+      <span className="inline-flex items-center select-none">
+        <span
+          className={clsx(
+            "grid place-items-center rounded-[14px] h-10 w-10 shrink-0 overflow-hidden p-1",
+            light ? "bg-cream" : "bg-white ring-1 ring-ink/10",
+          )}
+        >
+          <img src="/logo-emblem.png" alt="ROOTWISE AI" className="h-full w-full object-contain" draggable={false} />
+        </span>
+      </span>
+    );
+  }
   return (
-    <span className="inline-flex items-center gap-2.5 select-none">
+    <span className="inline-flex items-center select-none">
       <span
         className={clsx(
-          "grid place-items-center rounded-[14px] h-10 w-10 shrink-0",
-          light ? "bg-lime text-ink" : "bg-ink text-lime",
+          "inline-flex items-center rounded-[14px] px-2.5 py-1.5",
+          light ? "bg-cream shadow-[0_10px_30px_-18px_rgba(0,0,0,.8)]" : "bg-white ring-1 ring-ink/10",
         )}
       >
-        <svg viewBox="0 0 64 64" className="h-6 w-6" aria-hidden="true">
-          <path
-            d="M32 52V30M32 30c0-10 8-18 18-18 0 12-7 20-18 20Zm0 0c0-9-7-16-16-16 0 10 6 17 16 17Z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="3.4"
-            strokeLinecap="round"
-          />
-        </svg>
+        <img
+          src="/logo-nav.png"
+          alt="ROOTWISE AI — Cultiva decisiones, cosecha futuro"
+          className="h-8 w-auto sm:h-9"
+          draggable={false}
+        />
       </span>
-      {!compact && (
-        <span className="leading-none">
-          <span className={clsx("block font-semibold tracking-tight", light ? "text-cream" : "text-ink")}>
-            ROOTWISE <span className="font-display italic font-normal">AI</span>
-          </span>
-          <span className={clsx("text-[10px] uppercase tracking-[0.22em]", light ? "text-lime/70" : "text-ink/45")}>
-            Cultiva decisiones
-          </span>
-        </span>
-      )}
     </span>
   );
 }
