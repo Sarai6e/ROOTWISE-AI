@@ -1,0 +1,2 @@
+tensorflow>=2.21,<2.22
+Pillow>=11,<13

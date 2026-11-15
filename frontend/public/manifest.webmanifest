@@ -1,0 +1,26 @@
+{
+  "name": "ROOTWISE AI — Cultiva decisiones, cosecha futuro",
+  "short_name": "ROOTWISE AI",
+  "description": "Plataforma de aptitud y rotación de cultivos con datos de la NASA para productores del Perú.",
+  "start_url": "/app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F6F4EA",
+  "theme_color": "#0E2A20",
+  "lang": "es-PE",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["agriculture", "productivity", "utilities"]
+}

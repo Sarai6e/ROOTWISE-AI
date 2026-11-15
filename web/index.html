@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#163f31">
+<title>AgroVision AI · Análisis de hojas</title>
+<style>
+:root{color-scheme:light;--ink:#18362b;--muted:#52685d;--green:#245f46;--line:#dce7dd;--mint:#edf4ec;--paper:#f6f7ef;font-family:"DM Sans","Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper)}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid #a37c24;outline-offset:4px}header{background:#153e30;color:#fff}nav{max-width:1120px;margin:auto;padding:19px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-weight:750;font-size:1.16rem;display:flex;align-items:center;gap:10px}.mark{width:30px;height:30px;border-radius:9px 14px 9px 14px;background:#c6df9c;display:grid;place-items:center;color:#173925;font-size:1rem}.tag{color:#d3e7ce;font-size:.82rem;letter-spacing:.07em;text-transform:uppercase}.hero,main,footer{max-width:1120px;margin:auto;padding-inline:28px}.hero{padding-top:47px;padding-bottom:45px}.hero h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;letter-spacing:-.055em;font-size:clamp(2.85rem,7vw,5.25rem);line-height:.98;margin:0 0 15px}.hero p{color:#d7e6db;margin:0;max-width:520px;line-height:1.6}.hero em{color:#c6df9c;font-weight:400}
+main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;padding-top:28px}.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;min-width:0;box-shadow:0 10px 34px #1633290a}.panel h2{font-size:1.27rem;letter-spacing:-.03em;margin:0 0 16px}.drop{background:var(--mint);border:1.5px dashed #9eb7a4;border-radius:17px;min-height:237px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:22px}.drop.over{background:#dbead5;border-color:var(--green)}.drop.active{padding:0;border-style:solid;background:#162d25}.empty strong,.empty small{display:block}.empty strong{margin:10px 0 4px}.empty small,.muted{color:var(--muted)}.icon{font-size:1.7rem;display:inline-grid;place-items:center;width:54px;height:54px;border-radius:16px;background:#dcead5;color:var(--green)}#preview{width:100%;height:237px;object-fit:contain;display:block}#preview[hidden], [hidden]{display:none!important}.chooser{margin-top:15px;background:#fff;color:var(--green);border:1px solid #b5cab9}.primary{background:var(--green);color:white;border:1px solid var(--green);width:100%;margin-top:15px}.primary:hover:not(:disabled){background:#194b36}.primary:disabled{opacity:.51;cursor:default}.chooser,.primary,.text-btn{border-radius:10px;font-weight:650;cursor:pointer;padding:10px 15px}.file-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px;font-size:.87rem}.file-row span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.text-btn{padding:7px 0;background:none;border:0;color:var(--green);white-space:nowrap}.status{font-size:.88rem;margin:10px 0 0;color:var(--muted);line-height:1.45}.status:empty{display:none}.status.error{color:#a1261d}.pending{min-height:237px;background:#f7f9f4;border-radius:17px;display:grid;place-items:center;text-align:center;padding:25px}.pending strong{display:block;margin:12px 0 5px}.pending p{line-height:1.45;margin:0}.result-top{background:var(--mint);border-radius:16px;padding:17px;display:flex;align-items:center;justify-content:space-between;gap:12px}.result-top p{margin:0 0 4px;color:var(--muted);font-size:.81rem}.result-top h3{margin:0;font-size:1.43rem;line-height:1.2}.score{font-size:1.45rem;font-weight:750;color:var(--green);white-space:nowrap}.ranking{list-style:none;padding:0;margin:15px 0;display:grid;gap:12px}.rank-line{display:flex;justify-content:space-between;gap:8px;font-size:.86rem;margin-bottom:4px}.bar{display:block;height:6px;width:100%;appearance:none;border:0;border-radius:10px;overflow:hidden;background:#e7eee6}.bar::-webkit-progress-bar{background:#e7eee6}.bar::-webkit-progress-value{background:#50846a}.bar::-moz-progress-bar{background:#50846a}footer{color:var(--muted);font-size:.84rem;padding-top:20px;padding-bottom:24px;line-height:1.5}
+@media(max-width:690px){main{grid-template-columns:1fr}.hero,nav,main,footer{padding-inline:16px}.hero{padding-top:32px;padding-bottom:32px}.panel{padding:17px}.tag{font-size:.69rem}}
+</style>
+</head>
+<body>
+<header>
+<nav><div class="brand"><span class="mark" aria-hidden="true">✦</span> AgroVision AI</div><div class="tag">Visión por computadora</div></nav>
+<section class="hero"><h1>Analiza hojas <em>de vegetales</em></h1><p>Sube una foto de la hoja para ver las clases que identifica el modelo y sus probabilidades estimadas.</p></section>
+</header>
+<main>
+<section class="panel" aria-labelledby="upload-title">
+<h2 id="upload-title">Imagen de la hoja</h2>
+<input id="file" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+<div id="drop" class="drop">
+  <div id="upload-hint" class="empty"><span class="icon" aria-hidden="true">↑</span><strong>Arrastra una foto aquí</strong><small>JPG, PNG o WebP · Hasta 10 MB</small><button class="chooser" id="choose" type="button">Elegir imagen</button></div>
+  <img id="preview" alt="Vista previa de la hoja seleccionada" hidden>
+</div>
+<div id="file-row" class="file-row" hidden><span id="file-name"></span><button class="text-btn" id="change" type="button">Cambiar imagen</button></div>
+<button class="primary" id="analyze" type="button" disabled>Analizar imagen</button>
+<p id="status" class="status" role="status" aria-live="polite"></p>
+</section>
+<section class="panel" aria-labelledby="result-title" aria-live="polite">
+<h2 id="result-title">Resultado del análisis</h2>
+<div id="pending" class="pending"><div><span class="icon" aria-hidden="true">⌕</span><strong id="pending-title">A la espera de una imagen</strong><p id="pending-detail" class="muted">Aquí aparecerán las tres predicciones principales.</p></div></div>
+<div id="result" hidden><div class="result-top"><div><p>Predicción principal</p><h3 id="label"></h3></div><div class="score" id="score"></div></div><ol class="ranking" id="ranking"></ol><p class="status">La predicción es orientativa. El modelo compara 10 clases de hojas de tomate, incluida la hoja sana.</p></div>
+</section>
+</main>
+<footer>Modelo RGB · MobileNetV2 · F1 macro de 88,30 % en el conjunto de prueba de PlantVillage</footer>
+<script>
+const get = id => document.getElementById(id);
+const fileInput = get('file');
+const drop = get('drop');
+const preview = get('preview');
+const analyze = get('analyze');
+const status = get('status');
+const percent = new Intl.NumberFormat('es-PE', {style:'percent', maximumFractionDigits:1});
+const maxBytes = 10 * 1024 * 1024;
+let photo = null;
+let previewUrl = null;
+let running = false;
+
+function showStatus(message, error = false) {
+  status.textContent = message;
+  status.classList.toggle('error', error);
+}
+
+function showPending(title, detail) {
+  get('result').hidden = true;
+  get('pending').hidden = false;
+  get('pending-title').textContent = title;
+  get('pending-detail').textContent = detail;
+}
+
+function selectPhoto(file) {
+  if (!file || running) return;
+  if (!/\.(jpe?g|png|webp)$/i.test(file.name) || !file.size || file.size > maxBytes) {
+    showStatus('Elige una imagen JPG, PNG o WebP de hasta 10 MB.', true);
+    return;
+  }
+  if (previewUrl) URL.revokeObjectURL(previewUrl);
+  photo = file;
+  previewUrl = URL.createObjectURL(file);
+  preview.src = previewUrl;
+  preview.hidden = false;
+  drop.classList.add('active');
+  get('upload-hint').hidden = true;
+  get('file-row').hidden = false;
+  get('file-name').textContent = file.name;
+  analyze.disabled = false;
+  showStatus('');
+  showPending('Imagen lista para analizar', 'Pulsa «Analizar imagen» para ejecutar el modelo RGB.');
+}
+for (const id of ['choose','change']) get(id).addEventListener('click', () => fileInput.click());
+fileInput.addEventListener('change', () => {
+  selectPhoto(fileInput.files[0]);
+  fileInput.value = '';
+});
+drop.addEventListener('dragover', event => {
+  event.preventDefault();
+  if (!running) drop.classList.add('over');
+});
+drop.addEventListener('dragleave', () => drop.classList.remove('over'));
+drop.addEventListener('drop', event => {
+  event.preventDefault();
+  drop.classList.remove('over');
+  selectPhoto(event.dataTransfer.files[0]);
+});
+
+function showResult(predictions) {
+  const best = predictions[0];
+  get('label').textContent = best.label;
+  get('score').textContent = percent.format(best.score);
+  get('ranking').replaceChildren(...predictions.map(item => {
+    const li = document.createElement('li');
+    const line = document.createElement('div');
+    line.className = 'rank-line';
+    const name = document.createElement('span');
+    const score = document.createElement('strong');
+    name.textContent = item.label;
+    score.textContent = percent.format(item.score);
+    line.append(name, score);
+    const bar = document.createElement('progress');
+    bar.className = 'bar';
+    bar.max = 1;
+    bar.value = item.score;
+    bar.setAttribute('aria-label', item.label);
+    li.append(line, bar);
+    return li;
+  }));
+  get('pending').hidden = true;
+  get('result').hidden = false;
+}
+
+analyze.addEventListener('click', async () => {
+  if (!photo || running) return;
+  if (location.protocol === 'file:') {
+    showStatus('Ejecuta iniciar.cmd y abre la página desde el servidor local.', true);
+    return;
+  }
+  running = true;
+  analyze.disabled = true;
+  get('change').disabled = true;
+  analyze.textContent = 'Analizando…';
+  showStatus('');
+  showPending('Analizando la hoja', 'El modelo RGB está procesando la foto.');
+  try {
+    const response = await fetch('/predict', {
+      method:'POST',
+      headers:{'Content-Type':'application/octet-stream'},
+      body:photo
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error);
+    showResult(data.predictions);
+  } catch (error) {
+    showPending('Análisis pendiente', 'Puedes volver a intentar con esta imagen o elegir otra.');
+    showStatus(error.message === 'Failed to fetch' ? 'No se pudo conectar con el servidor local.' : error.message, true);
+  } finally {
+    running = false;
+    analyze.disabled = false;
+    get('change').disabled = false;
+    analyze.textContent = 'Analizar imagen';
+  }
+});
+</script>
+</body>
+</html>

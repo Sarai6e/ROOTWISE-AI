@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: rootwise-ai
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: "pip install --upgrade pip && pip install -r backend/requirements.txt && cd frontend && npm install --include=dev --no-audit --no-fund && npm run build"
+    startCommand: "cd backend && gunicorn --workers 1 --threads 4 --timeout 120 --bind 0.0.0.0:$PORT wsgi:app"
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:////opt/render/project/src/backend/data/rootwise.db
+      - key: ML_ENABLED
+        value: "0"
+      - key: AUTO_SEED
+        value: "1"
+      - key: FRONTEND_DIST
+        value: /opt/render/project/src/frontend/dist

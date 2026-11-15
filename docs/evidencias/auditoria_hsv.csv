@@ -1,0 +1,4 @@
+particion,total,respaldos_hsv
+train,11605,682
+val,2911,170
+test,3639,169

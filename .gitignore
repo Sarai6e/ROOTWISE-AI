@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Base de datos y datos locales
+backend/data/*.db
+backend/data/*.sqlite3
+backend/data/test_smoke.db
+
+# Node / frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# Entorno
+.env
+.env.local
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Modelo pesado opcional (ver README para descargarlo)
+# backend/ml/agrovision_rgb.keras
