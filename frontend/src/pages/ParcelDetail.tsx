@@ -276,7 +276,7 @@ export default function ParcelDetail() {
       <PageHeader
         eyebrow={parcel.farm_name || "ROOTWISE LAND"}
         title={parcel.name}
-        description={`${ha(parcel.area_ha)} · ${parcel.centroid_lat?.toFixed(5)}, ${parcel.centroid_lon?.toFixed(5)} · polígono de trabajo, no acredita propiedad.`}
+        description={`${ha(parcel.area_ha)} · ${parcel.centroid_lat?.toFixed(5)}, ${parcel.centroid_lon?.toFixed(5)} · ${t("parcel.workingPolygon")}`}
         actions={
           <>
             <Button variant="outline" onClick={() => downloadFile(`/parcels/${parcelId}/report.pdf`, `rootwise-${parcel.name}.pdf`)}>
@@ -323,18 +323,18 @@ export default function ParcelDetail() {
               <div className="space-y-4">
                 <Card className="p-5">
                   <div className="flex items-center justify-between">
-                    <DataTag>Ficha</DataTag>
+                    <DataTag>{t("parcel.sheet")}</DataTag>
                     <MapPin size={15} className="text-leaf/60" />
                   </div>
                   <dl className="mt-4 space-y-2.5 text-[12px]">
                     {[
-                      ["Finca", parcel.farm_name || "—"],
-                      ["Área", ha(parcel.area_ha)],
-                      ["Centroide", `${parcel.centroid_lat?.toFixed(5)}, ${parcel.centroid_lon?.toFixed(5)}`],
-                      ["Altitud", parcel.elevation_m ? `${parcel.elevation_m} m` : "sin dato"],
-                      ["Pendiente", parcel.slope_pct != null ? `${parcel.slope_pct}%` : "sin dato"],
-                      ["Agua", parcel.water_available || "—"],
-                      ["Riego", parcel.irrigation_type || "—"],
+                      [t("parcel.farm"), parcel.farm_name || "—"],
+                      [t("parcel.area"), ha(parcel.area_ha)],
+                      [t("parcel.centroid"), `${parcel.centroid_lat?.toFixed(5)}, ${parcel.centroid_lon?.toFixed(5)}`],
+                      [t("parcel.altitude"), parcel.elevation_m ? `${parcel.elevation_m} m` : t("parcel.noData")],
+                      [t("parcel.slope"), parcel.slope_pct != null ? `${parcel.slope_pct}%` : t("parcel.noData")],
+                      [t("parcel.water"), parcel.water_available ? t(`level.${parcel.water_available}`) : "—"],
+                      [t("parcel.irrigation"), parcel.irrigation_type || "—"],
                     ].map(([label, value]) => (
                       <div key={label} className="flex items-baseline justify-between gap-3 border-b border-ink/6 pb-2 last:border-0 last:pb-0">
                         <dt className="text-ink/40">{label}</dt>
@@ -347,7 +347,7 @@ export default function ParcelDetail() {
 
                 <Card className="p-5">
                   <div className="flex items-center justify-between">
-                    <DataTag>Suelo más reciente</DataTag>
+                    <DataTag>{t("parcel.soilLatest")}</DataTag>
                     <Droplets size={15} className="text-leaf/60" />
                   </div>
                   {latestSoil ? (
@@ -358,7 +358,7 @@ export default function ParcelDetail() {
                       </div>
                       <div className="rounded-xl bg-sand/60 p-2.5">
                         <p className="font-display text-lg leading-none capitalize">{latestSoil.texture || "—"}</p>
-                        <p className="text-[9px] uppercase tracking-wider text-ink/35">textura</p>
+                        <p className="text-[9px] uppercase tracking-wider text-ink/35">{t("parcel.texture")}</p>
                       </div>
                       <div className="rounded-xl bg-sand/60 p-2.5">
                         <p className="font-display text-lg leading-none">{latestSoil.organic_matter_pct ?? "—"}%</p>

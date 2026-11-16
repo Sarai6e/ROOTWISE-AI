@@ -79,9 +79,11 @@ export default function Simulator() {
 
       {selected && (
         <p className="mb-3 text-[11px] text-ink/40">
-          Evaluando <span className="font-medium text-ink/65">{selected.name}</span> ·{" "}
-          {selected.elevation_m ? `${selected.elevation_m} m` : "altitud sin dato"} · agua{" "}
-          {selected.water_available}
+          {t("sim.evaluating", {
+            name: selected.name,
+            altitude: selected.elevation_m ? `${selected.elevation_m} m` : t("sim.noAltitude"),
+            water: t(`level.${selected.water_available || "media"}`),
+          })}
         </p>
       )}
 

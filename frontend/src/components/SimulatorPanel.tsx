@@ -13,6 +13,7 @@ import {
   X,
 } from "lucide-react";
 import { api } from "../lib/api";
+import { useSimulationExplanation } from "../lib/explain";
 import { classificationMeta, fecha, pct } from "../lib/format";
 import { useI18n } from "../lib/i18n";
 import { Badge, Button, Card, DataTag, Field, Input, Modal, ScoreBar, Spinner } from "./ui";
@@ -35,6 +36,7 @@ export default function SimulatorPanel({
 }) {
   const queryClient = useQueryClient();
   const { t } = useI18n();
+  const explain = useSimulationExplanation();
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<number[]>([]);
   const [sowingDate, setSowingDate] = useState(new Date().toISOString().slice(0, 10));
@@ -303,7 +305,7 @@ export default function SimulatorPanel({
                       ))}
                     </div>
 
-                    <p className="mt-4 text-[11px] leading-relaxed text-ink/50">{result.explanation}</p>
+                    <p className="mt-4 text-[11px] leading-relaxed text-ink/50">{explain(result)}</p>
 
                     <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
                       <button

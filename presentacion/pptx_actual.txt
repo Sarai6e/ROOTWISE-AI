@@ -1,0 +1,344 @@
+SLIDE SIZE: 12192000x6858000 EMU (13.33x7.50 in)
+SLIDES: 13
+
+======================================================================
+SLIDE 1  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.75 T4.16 W0.75 H0.04)
+  - [PICTURE (13)] Picture 2 (L8.62 T1.79 W3.96 H3.92)
+  - [PICTURE (13)] Picture 3 (L8.94 T2.08 W3.33 H3.33)
+  - [TEXT_BOX (17)] TextBox 4 (L0.75 T2.27 W9.11 H0.20)
+      lvl0 | SMART AND RESILIENT AGRICULTURE | size={11.25} bold={True}
+  - [TEXT_BOX (17)] TextBox 5 (L0.75 T2.65 W9.57 H0.74)
+      lvl0 | ROOTWISE AI | size={51.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 6 (L0.75 T3.56 W9.11 H0.34)
+      lvl0 | Grow decisions, harvest the future. | size={19.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 7 (L0.75 T4.45 W5.94 H0.78)
+      lvl0 | Smart farming advisor with satellite data, AI and offline access for small and medium-sized producers in Peru. | size={15.0} bold={False}
+
+======================================================================
+SLIDE 2  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 2 (L6.92 T2.12 W5.75 H1.08)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 3 (L6.92 T3.46 W5.75 H1.08)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 4 (L6.92 T4.79 W5.75 H1.32)
+  - [PICTURE (13)] Picture 5 (L0.67 T1.52 W5.75 H5.21)
+  - [PICTURE (13)] Picture 6 (L0.67 T1.52 W3.05 H0.22)
+  - [PICTURE (13)] Picture 7 (L7.21 T2.42 W0.27 H0.22)
+  - [PICTURE (13)] Picture 8 (L7.21 T3.75 W0.27 H0.22)
+  - [PICTURE (13)] Picture 9 (L7.21 T5.08 W0.27 H0.22)
+  - [TEXT_BOX (17)] TextBox 10 (L0.88 T0.50 W6.43 H0.45)
+      lvl0 | The Challenge for Rural Farmers | size={25.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 11 (L7.21 T2.38 W6.12 H0.28)
+      lvl0 | Climate and soil uncertainty | size={15.75} bold={True}
+  - [TEXT_BOX (17)] TextBox 12 (L7.21 T2.72 W6.12 H0.24)
+      lvl0 | Planting decisions made without local data or forecasts. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 13 (L7.21 T3.71 W6.12 H0.28)
+      lvl0 | Digital divide in rural areas | size={15.75} bold={True}
+  - [TEXT_BOX (17)] TextBox 14 (L7.21 T4.05 W6.12 H0.24)
+      lvl0 | Limited connectivity and complex sign-up barriers. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 15 (L7.21 T5.04 W6.12 H0.28)
+      lvl0 | Losses from pests and rotation | size={15.75} bold={True}
+  - [TEXT_BOX (17)] TextBox 16 (L7.21 T5.39 W5.27 H0.48)
+      lvl0 | Late disease detection and soil depletion. | size={13.5} bold={False}
+
+======================================================================
+SLIDE 3  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 2 (L0.67 T3.11 W3.81 H2.35)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 3 (L4.76 T2.97 W3.81 H2.65)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 4 (L8.86 T3.11 W3.81 H2.35)
+  - [PICTURE (13)] Picture 5 (L0.96 T3.45 W0.58 H0.58)
+  - [PICTURE (13)] Picture 6 (L5.06 T3.30 W0.58 H0.58)
+  - [PICTURE (13)] Picture 7 (L9.15 T3.45 W0.58 H0.58)
+  - [PICTURE (13)] Picture 8 (L1.12 T3.61 W0.25 H0.25)
+  - [PICTURE (13)] Picture 9 (L5.22 T3.47 W0.25 H0.25)
+  - [PICTURE (13)] Picture 10 (L9.35 T3.61 W0.19 H0.25)
+  - [TEXT_BOX (17)] TextBox 11 (L0.67 T1.07 W12.67 H0.26)
+      lvl0 | A free, traceable farming advisor that turns open science into field decisions. | size={15.0} bold={False}
+  - [TEXT_BOX (17)] TextBox 12 (L0.88 T0.50 W5.37 H0.45)
+      lvl0 | What is ROOTWISE AI? | size={25.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 13 (L0.96 T4.20 W4.23 H0.29)
+      lvl0 | Open Satellite Science | size={16.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 14 (L0.96 T4.66 W3.33 H0.48)
+      lvl0 | Integrates data from NASA, FAOSTAT and official Peruvian sources. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 15 (L5.06 T4.05 W3.49 H0.58)
+      lvl0 | Explainable Agronomic Engine | size={16.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 16 (L5.06 T4.80 W3.33 H0.48)
+      lvl0 | Assesses crop suitability and rotations for your plot. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 17 (L9.15 T4.20 W4.18 H0.29)
+      lvl0 | Offline-First and Inclusive | size={16.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 18 (L9.15 T4.66 W3.33 H0.48)
+      lvl0 | Works without internet in Spanish, Quechua and native languages. | size={13.5} bold={False}
+
+======================================================================
+SLIDE 4  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 2 (L1.29 T2.94 W0.67 H0.67)
+  - [AUTO_SHAPE (1)] Rectangle 3 (L2.12 T3.25 W2.36 H0.04)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 4 (L4.65 T2.94 W0.67 H0.67)
+  - [AUTO_SHAPE (1)] Rectangle 5 (L5.49 T3.25 W2.36 H0.04)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 6 (L8.01 T2.94 W0.67 H0.67)
+  - [AUTO_SHAPE (1)] Rectangle 7 (L8.85 T3.25 W2.36 H0.04)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 8 (L11.38 T2.94 W0.67 H0.67)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 9 (L0.67 T3.94 W2.81 H1.32)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 10 (L3.73 T3.94 W2.81 H1.32)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 11 (L6.79 T3.94 W2.81 H1.32)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 12 (L9.85 T3.94 W2.81 H1.32)
+  - [TEXT_BOX (17)] TextBox 13 (L0.88 T0.50 W6.02 H0.45)
+      lvl0 | 4-Step Workflow | size={25.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 14 (L1.14 T2.94 W0.98 H0.67)
+      lvl0 | 1 | size={18.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 15 (L4.50 T2.94 W0.98 H0.67)
+      lvl0 | 2 | size={18.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 16 (L7.86 T2.94 W0.98 H0.67)
+      lvl0 | 3 | size={18.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 17 (L11.22 T2.94 W0.98 H0.67)
+      lvl0 | 4 | size={18.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 18 (L0.50 T4.19 W3.14 H0.26)
+      lvl0 | Outline your plot | size={15.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 19 (L0.58 T4.53 W2.99 H0.48)
+      lvl0 | Draw the polygon on a 2D or 3D map. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 20 (L3.56 T4.19 W3.14 H0.26)
+      lvl0 | Cross-check real data | size={15.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 21 (L3.64 T4.53 W2.99 H0.48)
+      lvl0 | Combines satellite climate, terrain and soil. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 22 (L6.63 T4.19 W3.14 H0.26)
+      lvl0 | Simulate crops | size={15.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 23 (L6.70 T4.53 W2.99 H0.48)
+      lvl0 | Compare suitability and recommended rotation. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 24 (L9.69 T4.19 W3.14 H0.26)
+      lvl0 | Manage your season | size={15.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 25 (L9.76 T4.53 W2.99 H0.48)
+      lvl0 | Track field work, irrigation and plant health. | size={13.5} bold={False}
+
+======================================================================
+SLIDE 5  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [PICTURE (13)] Picture 2 (L0.67 T1.57 W6.69 H5.10)
+  - [PICTURE (13)] Picture 3 (L0.67 T1.57 W6.69 H5.10)
+  - [PICTURE (13)] Picture 4 (L7.82 T3.09 W0.22 H0.25)
+  - [PICTURE (13)] Picture 5 (L7.82 T3.88 W0.25 H0.25)
+  - [PICTURE (13)] Picture 6 (L7.82 T4.67 W0.28 H0.25)
+  - [TEXT_BOX (17)] TextBox 7 (L0.88 T0.50 W7.05 H0.45)
+      lvl0 | Plot Mapping and 3D Terrain | size={25.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 8 (L8.20 T3.05 W4.63 H0.28)
+      lvl0 | Interactive polygon drawing | size={15.75} bold={True}
+  - [TEXT_BOX (17)] TextBox 9 (L8.20 T3.37 W4.41 H0.24)
+      lvl0 | Automatic area and perimeter calculation. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 10 (L8.24 T3.84 W5.10 H0.28)
+      lvl0 | 3D terrain and lightweight 2D mode | size={15.75} bold={True}
+  - [TEXT_BOX (17)] TextBox 11 (L8.24 T4.16 W5.10 H0.24)
+      lvl0 | Altitude and slope adapted to basic phones. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 12 (L8.27 T4.63 W5.07 H0.28)
+      lvl0 | Traceable layers | size={15.75} bold={True}
+  - [TEXT_BOX (17)] TextBox 13 (L8.27 T4.95 W5.07 H0.24)
+      lvl0 | Source, resolution and date shown on every map. | size={13.5} bold={False}
+
+======================================================================
+SLIDE 6  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 2 (L0.67 T2.56 W5.88 H1.42)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 3 (L6.79 T2.66 W5.88 H1.21)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 4 (L0.67 T4.22 W5.88 H1.42)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 5 (L6.79 T4.22 W5.88 H1.42)
+  - [PICTURE (13)] Picture 6 (L0.96 T2.95 W0.62 H0.62)
+  - [PICTURE (13)] Picture 7 (L7.08 T2.95 W0.62 H0.62)
+  - [PICTURE (13)] Picture 8 (L0.96 T4.62 W0.62 H0.62)
+  - [PICTURE (13)] Picture 9 (L7.08 T4.62 W0.62 H0.62)
+  - [PICTURE (13)] Picture 10 (L1.14 T3.13 W0.27 H0.27)
+  - [PICTURE (13)] Picture 11 (L7.26 T3.13 W0.27 H0.27)
+  - [PICTURE (13)] Picture 12 (L1.14 T4.80 W0.27 H0.27)
+  - [PICTURE (13)] Picture 13 (L7.26 T4.80 W0.27 H0.27)
+  - [TEXT_BOX (17)] TextBox 14 (L0.88 T0.50 W8.80 H0.45)
+      lvl0 | Satellite Intelligence and Official Sources | size={25.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 15 (L1.79 T2.85 W5.85 H0.29)
+      lvl0 | NASA POWER and GPM | size={16.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 16 (L1.79 T3.20 W4.56 H0.48)
+      lvl0 | Solar radiation, temperature and estimated rainfall. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 17 (L7.92 T2.97 W5.42 H0.29)
+      lvl0 | NASA Earthdata and MODIS | size={16.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 18 (L7.92 T3.32 W5.42 H0.24)
+      lvl0 | NDVI vegetation indices and surface moisture. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 19 (L1.79 T4.52 W5.85 H0.29)
+      lvl0 | FAOSTAT and INIA | size={16.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 20 (L1.79 T4.87 W4.56 H0.48)
+      lvl0 | Global crop catalog and agronomic requirements. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 21 (L7.92 T4.52 W5.42 H0.29)
+      lvl0 | SENAMHI, ENFEN and SENASA | size={16.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 22 (L7.92 T4.87 W4.56 H0.48)
+      lvl0 | Official weather alerts and plant-health records. | size={13.5} bold={False}
+
+======================================================================
+SLIDE 7  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [PICTURE (13)] Picture 2 (L0.92 T3.22 W0.19 H0.19)
+  - [PICTURE (13)] Picture 3 (L0.92 T5.69 W0.19 H0.19)
+  - [PICTURE (13)] Picture 4 (L0.92 T3.96 W0.19 H0.19)
+  - [PICTURE (13)] Picture 5 (L0.92 T4.83 W0.19 H0.19)
+  - [PICTURE (13)] Picture 6 (L0.92 T3.22 W0.19 H0.19)
+  - [PICTURE (13)] Picture 7 (L0.92 T3.96 W0.19 H0.19)
+  - [PICTURE (13)] Picture 8 (L0.92 T4.83 W0.19 H0.19)
+  - [PICTURE (13)] Picture 9 (L0.92 T5.69 W0.19 H0.19)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 10 (L0.67 T2.38 W12.00 H3.82)
+  - [TABLE (19)] Table 11 (L0.67 T2.38 W12.00 H3.82)
+      TABLE ROW: Classification | Plot diagnosis | Suggested action
+      TABLE ROW: Recommended | Climate, altitude and rotation are compatible. | Plan planting and calendar.
+      TABLE ROW: Viable with restrictions | Requires irrigation, drainage or date adjustment. | Apply prior agronomic management.
+      TABLE ROW: High risk | Critical frost or soil constraint. | Avoid losses and choose an alternative.
+      TABLE ROW: Insufficient data | Key soil or water parameters are missing. | Complete the data sheet before investing.
+  - [TEXT_BOX (17)] TextBox 12 (L0.67 T1.07 W12.67 H0.25)
+      lvl0 | Explainable multi-criteria assessment with critical filters for altitude, soil, climate and crop history. | size={14.25} bold={False}
+  - [TEXT_BOX (17)] TextBox 13 (L0.88 T0.50 W7.14 H0.45)
+      lvl0 | Suitability and Rotation Simulator | size={25.5} bold={True}
+
+======================================================================
+SLIDE 8  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 2 (L0.67 T4.60 W6.21 H0.61)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 3 (L0.67 T5.36 W6.21 H0.61)
+  - [PICTURE (13)] Picture 4 (L7.38 T1.62 W5.29 H5.00)
+  - [PICTURE (13)] Picture 5 (L7.38 T1.62 W5.29 H5.00)
+  - [PICTURE (13)] Picture 6 (L0.90 T4.80 W0.21 H0.21)
+  - [PICTURE (13)] Picture 7 (L0.90 T5.56 W0.24 H0.21)
+  - [TEXT_BOX (17)] TextBox 8 (L0.88 T0.50 W7.00 H0.45)
+      lvl0 | AI-Assisted Plant Health | size={25.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 9 (L0.67 T3.79 W6.31 H0.52)
+      lvl0 | Model trained for fast field triage using photos of leaves and symptoms. | size={15.0} bold={False}
+  - [TEXT_BOX (17)] TextBox 10 (L0.67 T2.27 W1.43 H1.00)
+      lvl0 | 10 | size={72.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 11 (L1.99 T2.89 W4.99 H0.69)
+      lvl0 | diseases detected without internet | size={19.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 12 (L1.25 T4.79 W6.21 H0.24)
+      lvl0 | Prioritizes prevention and Integrated Pest Management (IPM). | size={13.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 13 (L1.28 T5.55 W5.91 H0.24)
+      lvl0 | Inputs only with a valid official SENASA registration. | size={13.5} bold={True}
+
+======================================================================
+SLIDE 9  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 2 (L0.67 T2.72 W5.81 H2.80)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 3 (L6.85 T2.72 W5.81 H2.80)
+  - [PICTURE (13)] Picture 4 (L1.00 T3.10 W0.36 H0.29)
+  - [PICTURE (13)] Picture 5 (L7.19 T3.10 W0.36 H0.29)
+  - [TEXT_BOX (17)] TextBox 6 (L0.88 T0.50 W9.12 H0.45)
+      lvl0 | Real Inclusion: Offline-First and Multilingual | size={25.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 7 (L1.51 T3.09 W3.84 H0.31)
+      lvl0 | 100% Operational Without a Network | size={18.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 8 (L1.00 T3.61 W6.43 H0.24)
+      lvl0 | Open sign-up: No email, SMS or mandatory ID required. | size={13.5} bold={False, True}
+  - [TEXT_BOX (17)] TextBox 9 (L1.00 T4.02 W5.25 H0.48)
+      lvl0 | Local cache: Maps, simulator and AI run on the phone. | size={13.5} bold={False, True}
+  - [TEXT_BOX (17)] TextBox 10 (L1.00 T4.67 W5.25 H0.48)
+      lvl0 | Secure sync: Automatic upload when signal returns. | size={13.5} bold={False, True}
+  - [TEXT_BOX (17)] TextBox 11 (L7.70 T3.09 W3.50 H0.31)
+      lvl0 | Linguistic Diversity | size={18.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 12 (L7.19 T3.61 W6.15 H0.24)
+      lvl0 | Local languages: Spanish, regional Quechua and Aymara. | size={13.5} bold={False, True}
+  - [TEXT_BOX (17)] TextBox 13 (L7.19 T4.02 W5.25 H0.48)
+      lvl0 | Cultural scalability: Ready for Amazonian languages and English. | size={13.5} bold={False, True}
+  - [TEXT_BOX (17)] TextBox 14 (L7.19 T4.67 W5.25 H0.48)
+      lvl0 | Local synonyms: Respects community names for crops and pests. | size={13.5} bold={False, True}
+
+======================================================================
+SLIDE 10  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 2 (L0.67 T2.30 W12.00 H1.06)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 3 (L0.67 T3.57 W12.00 H1.06)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 4 (L0.67 T4.84 W12.00 H1.06)
+  - [PICTURE (13)] Picture 5 (L1.00 T2.68 W0.36 H0.29)
+  - [PICTURE (13)] Picture 6 (L1.00 T3.95 W0.29 H0.29)
+  - [PICTURE (13)] Picture 7 (L1.00 T5.22 W0.26 H0.29)
+  - [TEXT_BOX (17)] TextBox 8 (L0.88 T0.50 W7.72 H0.45)
+      lvl0 | Modular Technology Architecture | size={25.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 9 (L9.77 T2.71 W3.20 H0.24)
+      lvl0 | React · TypeScript · Tailwind | size={13.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 10 (L10.12 T3.98 W2.76 H0.24)
+      lvl0 | Python Flask · APIs REST | size={13.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 11 (L9.74 T5.25 W3.24 H0.24)
+      lvl0 | SQL · PostgreSQL + PostGIS | size={13.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 12 (L1.55 T2.55 W7.41 H0.28)
+      lvl0 | PWA & Offline Frontend | size={15.75} bold={True}
+  - [TEXT_BOX (17)] TextBox 13 (L1.55 T2.87 W7.06 H0.24)
+      lvl0 | Lightweight interface, 2D/3D maps and local IndexedDB storage. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 14 (L1.48 T3.82 W6.89 H0.28)
+      lvl0 | Backend API & AI Engine | size={15.75} bold={True}
+  - [TEXT_BOX (17)] TextBox 15 (L1.48 T4.14 W6.56 H0.24)
+      lvl0 | Agronomic rules, satellite data ingestion and plant-health model. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 16 (L1.45 T5.09 W7.36 H0.28)
+      lvl0 | Geospatial Database | size={15.75} bold={True}
+  - [TEXT_BOX (17)] TextBox 17 (L1.45 T5.41 W7.01 H0.24)
+      lvl0 | Plot polygons, global catalog and audited traceability. | size={13.5} bold={False}
+
+======================================================================
+SLIDE 11  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L0.67 T0.56 W0.08 H0.33)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 2 (L0.67 T2.52 W12.00 H1.48)
+  - [AUTO_SHAPE (1)] Rectangle 3 (L4.68 T2.93 W0.02 H0.67)
+  - [AUTO_SHAPE (1)] Rectangle 4 (L8.93 T2.93 W0.02 H0.67)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 5 (L0.67 T4.38 W3.83 H1.30)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 6 (L4.75 T4.38 W3.83 H1.30)
+  - [AUTO_SHAPE (1)] Rounded Rectangle 7 (L8.83 T4.38 W3.83 H1.30)
+  - [TEXT_BOX (17)] TextBox 8 (L0.88 T0.50 W7.26 H0.45)
+      lvl0 | Value Proposition and Rollout | size={25.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 9 (L1.21 T2.81 W2.63 H0.60)
+      lvl0 | S/ 0 | size={39.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 10 (L1.21 T3.47 W2.63 H0.24)
+      lvl0 | Cost to the farmer | size={13.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 11 (L5.55 T2.81 W2.53 H0.60)
+      lvl0 | 100% | size={39.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 12 (L5.55 T3.47 W2.53 H0.24)
+      lvl0 | Works without sensors | size={13.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 13 (L9.83 T2.81 W2.27 H0.60)
+      lvl0 | +4 | size={39.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 14 (L9.83 T3.47 W2.27 H0.24)
+      lvl0 | Supported languages | size={13.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 15 (L0.92 T4.63 W4.38 H0.26)
+      lvl0 | Phase 1 · Territorial MVP | size={15.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 16 (L0.92 T4.95 W3.44 H0.48)
+      lvl0 | 2D/3D plots, simulator and offline mode. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 17 (L5.00 T4.63 W4.38 H0.26)
+      lvl0 | Phase 2 · Plant Health and Irrigation | size={15.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 18 (L5.00 T4.95 W3.44 H0.48)
+      lvl0 | AI diagnosis of 10 pests and water guidance. | size={13.5} bold={False}
+  - [TEXT_BOX (17)] TextBox 19 (L9.08 T4.63 W4.25 H0.26)
+      lvl0 | Phase 3 · Scaling | size={15.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 20 (L9.08 T4.95 W3.44 H0.48)
+      lvl0 | New regions, languages and rural community. | size={13.5} bold={False}
+
+======================================================================
+SLIDE 12  layout='Blank'
+  - [AUTO_SHAPE (1)] Rounded Rectangle 1 (L6.25 T6.05 W0.83 H0.04)
+  - [PICTURE (13)] Picture 2 (L5.62 T1.41 W2.08 H2.12)
+  - [PICTURE (13)] Picture 3 (L5.83 T1.62 W1.67 H1.67)
+  - [TEXT_BOX (17)] TextBox 4 (L4.19 T3.83 W4.96 H0.71)
+      lvl0 | ROOTWISE AI | size={40.5} bold={True}
+  - [TEXT_BOX (17)] TextBox 5 (L3.61 T4.66 W6.12 H0.36)
+      lvl0 | Grow decisions, harvest the future. | size={21.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 6 (L2.24 T5.19 W8.85 H0.52)
+      lvl0 | Technology and artificial intelligence serving a fairer, better-informed and more sustainable agriculture. | size={15.0} bold={False}
+
+======================================================================
+SLIDE 13  layout='Blank'
+  - [AUTO_SHAPE (1)] Rectangle 1 (L0.62 T0.94 W12.08 H0.84)
+  - [AUTO_SHAPE (1)] Rectangle 2 (L0.62 T1.78 W12.08 H0.84)
+  - [AUTO_SHAPE (1)] Rectangle 3 (L0.62 T1.77 W12.08 H0.01)
+  - [AUTO_SHAPE (1)] Rectangle 4 (L0.62 T1.77 W12.08 H0.01)
+  - [AUTO_SHAPE (1)] Rectangle 5 (L0.62 T2.61 W12.08 H0.01)
+  - [AUTO_SHAPE (1)] Rectangle 6 (L0.62 T2.61 W12.08 H0.01)
+  - [PICTURE (13)] Picture 7 (L0.62 T1.09 W0.94 H0.52)
+  - [PICTURE (13)] Picture 8 (L0.62 T1.94 W1.45 H0.44)
+  - [PICTURE (13)] Picture 9 (L0.62 T2.78 W0.94 H0.52)
+  - [TEXT_BOX (17)] TextBox 10 (L0.62 T0.62 W2.39 H0.31)
+      lvl0 | Image Sources | size={18.0} bold={True}
+  - [TEXT_BOX (17)] TextBox 11 (L1.82 T1.14 W7.15 H0.17)
+      lvl0 | https://www.rtb.cgiar.org/wp-content/uploads/2018/03/Andean-potato-farmers-1.jpg | size={9.75} bold={False}
+  - [TEXT_BOX (17)] TextBox 12 (L1.82 T1.35 W2.62 H0.22)
+      lvl0 | Source: www.rtb.cgiar.org | size={12.0} bold={False}
+  - [TEXT_BOX (17)] TextBox 13 (L1.82 T1.98 W11.51 H0.17)
+      lvl0 | https://www.mapog.com/wp-content/uploads/2026/03/Map-Farm-Land-Using-Satellite-Images-and-Add-Crop-Details-with-Polygons.jpeg | size={9.75} bold={False}
+  - [TEXT_BOX (17)] TextBox 14 (L1.82 T2.20 W2.62 H0.22)
+      lvl0 | Source: www.mapog.com | size={12.0} bold={False}
+  - [TEXT_BOX (17)] TextBox 15 (L1.82 T2.82 W9.49 H0.17)
+      lvl0 | https://www.sustainablemarketfarming.com/wp-content/uploads/2020/06/sweet-potato-plants-blog-Kathryn.jpg | size={9.75} bold={False}
+  - [TEXT_BOX (17)] TextBox 16 (L1.82 T3.04 W4.49 H0.22)
+      lvl0 | Source: www.sustainablemarketfarming.com | size={12.0} bold={False}

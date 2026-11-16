@@ -119,7 +119,7 @@ export default function Health() {
       <div className="grid gap-4 lg:grid-cols-[0.92fr_1.08fr]">
         <Card className="p-5">
           <div className="flex items-center justify-between">
-            <DataTag>Diagnóstico de hoja</DataTag>
+            <DataTag>{t("health.diagnosisTag")}</DataTag>
             <Stethoscope size={16} className="text-leaf/60" />
           </div>
           <h3 className="mt-3 font-display text-2xl leading-tight tracking-tight">{t("health.upload")}</h3>
@@ -190,7 +190,9 @@ export default function Health() {
                 <div className="flex items-end justify-between gap-3">
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.16em] text-ink/35">{t("health.main")}</p>
-                    <h3 className="mt-1 font-display text-3xl leading-tight">{result.predictions[0]?.label}</h3>
+                    <h3 className="mt-1 font-display text-3xl leading-tight">
+                      {t(`leaf.${(result.predictions[0]?.class || "").replace(/[^a-zA-Z0-9]/g, "_")}`)}
+                    </h3>
                   </div>
                   <p className="font-display text-4xl leading-none tabular-nums">
                     {pct(result.predictions[0]?.score)}
@@ -201,25 +203,29 @@ export default function Health() {
                   {result.predictions.map((prediction: any) => (
                     <div key={prediction.class}>
                       <div className="flex items-center justify-between text-[11px]">
-                        <span className="text-ink/60">{prediction.label}</span>
+                        <span className="text-ink/60">
+                          {t(`leaf.${String(prediction.class).replace(/[^a-zA-Z0-9]/g, "_")}`)}
+                        </span>
                         <span className="tabular-nums text-ink/40">{pct(prediction.score, 1)}</span>
                       </div>
                       <div className="mt-1"><ScoreBar value={prediction.score} /></div>
                       {prediction.advice && (
-                        <p className="mt-1 text-[10px] leading-relaxed text-ink/40">{prediction.advice}</p>
+                        <p className="mt-1 text-[10px] leading-relaxed text-ink/40">
+                          {t(`mip.${String(prediction.class).replace(/[^a-zA-Z0-9]/g, "_")}`)}
+                        </p>
                       )}
                     </div>
                   ))}
                 </div>
 
                 <p className="mt-4 rounded-xl border border-ink/8 bg-sand/50 px-3 py-2.5 text-[10px] leading-relaxed text-ink/45">
-                  {result.mip} {result.disclaimer} Modelo {result.model_version}.
+                  {t("health.mipNote")} {t("health.model")} {result.model_version}.
                 </p>
               </div>
             ) : (
               <div className="py-10 text-center">
                 <Microscope size={26} className="mx-auto text-ink/20" />
-                <p className="mt-3 text-sm text-ink/45">Sube una imagen para ver las tres clases más probables.</p>
+                <p className="mt-3 text-sm text-ink/45">{t("health.emptyResult")}</p>
               </div>
             )}
           </Card>
@@ -227,9 +233,9 @@ export default function Health() {
           <Card className="p-5">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
-                <DataTag>Modelo AgroVision</DataTag>
+                <DataTag>{t("health.modelCard")}</DataTag>
                 <p className="mt-1.5 text-[11px] text-ink/45">
-                  MobileNetV2 · PlantVillage · {capabilities?.classes?.length || 10} clases
+                  MobileNetV2 · PlantVillage · {capabilities?.classes?.length || 10} {t("health.classes")}
                 </p>
               </div>
               <div className="flex gap-4 text-right">
@@ -239,14 +245,14 @@ export default function Health() {
                 </div>
                 <div>
                   <p className="font-display text-xl leading-none">{pct(capabilities?.metrics?.accuracy, 1)}</p>
-                  <p className="text-[9px] uppercase tracking-wider text-ink/35">exactitud</p>
+                  <p className="text-[9px] uppercase tracking-wider text-ink/35">{t("health.accuracy")}</p>
                 </div>
               </div>
             </div>
             <div className="mt-3 flex flex-wrap gap-1.5">
               {(capabilities?.classes || []).slice(0, 10).map((item: any) => (
                 <span key={item.class} className="rounded-full border border-ink/10 bg-sand/60 px-2 py-1 text-[9px] text-ink/50">
-                  {item.label}
+                  {t(`leaf.${item.class.replace(/[^a-zA-Z0-9]/g, "_")}`)}
                 </span>
               ))}
             </div>
@@ -272,13 +278,13 @@ export default function Health() {
               <Textarea
                 value={observation.symptoms}
                 onChange={(event) => setObservation({ ...observation, symptoms: event.target.value })}
-                placeholder="Manchas oscuras en hojas bajas, bordes amarillos…"
+                placeholder={t("health.symptomsPlaceholder")}
               />
             </Field>
             <div className="grid grid-cols-2 gap-3">
               <Field label={t("health.severity")}>
                 <Select value={observation.severity} onChange={(event) => setObservation({ ...observation, severity: event.target.value })}>
-                  <option value="baja">Baja</option><option value="media">Media</option><option value="alta">Alta</option>
+                  <option value="baja">{t("level.baja")}</option><option value="media">{t("level.media")}</option><option value="alta">{t("level.alta")}</option>
                 </Select>
               </Field>
               <Field label={t("health.date")}>

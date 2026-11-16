@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Line, OrbitControls, Stars } from "@react-three/drei";
 import * as THREE from "three";
+import { useI18n } from "../lib/i18n";
 
 type Ring = number[][];
 
@@ -106,6 +107,7 @@ export default function ParcelScene({
   autoRotate?: boolean;
 }) {
   const points = useMemo(() => toLocal(geometry?.coordinates?.[0] as Ring | undefined), [geometry]);
+  const { t } = useI18n();
 
   return (
     <div className={className}>
@@ -131,7 +133,7 @@ export default function ParcelScene({
       </Canvas>
       <div className="pointer-events-none absolute bottom-3 left-3 flex items-center gap-2 rounded-full border border-white/15 bg-ink/50 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-cream/60 backdrop-blur">
         <span className="h-1.5 w-1.5 rounded-full bg-lime" />
-        Relieve referencial · no es imagen en vivo
+        {t("parcel.terrain3d")}
       </div>
     </div>
   );

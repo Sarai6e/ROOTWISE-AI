@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
+import { useSimulationExplanation } from "../lib/explain";
 import { useI18n } from "../lib/i18n";
 import { classificationMeta, fechaHora, ha, pct } from "../lib/format";
 import AuthedImage from "../components/AuthedImage";
@@ -24,6 +25,7 @@ import { Badge, Button, Card, DataTag, EmptyState, PageHeader, ScoreBar, Spinner
 export default function Dashboard() {
   const { user } = useAuth();
   const { t } = useI18n();
+  const explain = useSimulationExplanation();
 
   const { data: farms = [], isLoading } = useQuery<any[]>({
     queryKey: ["farms"],
@@ -165,7 +167,7 @@ export default function Dashboard() {
               </div>
               <div className="mt-2"><ScoreBar value={bestResult.score} /></div>
               <p className="mt-4 line-clamp-4 text-[11px] leading-relaxed text-ink/45">
-                {bestResult.explanation}
+                {explain(bestResult)}
               </p>
             </div>
           ) : (

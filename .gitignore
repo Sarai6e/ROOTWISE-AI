@@ -17,6 +17,7 @@ backend/data/test_smoke.db
 node_modules/
 frontend/dist/
 frontend/.vite/
+frontend/tsconfig.tsbuildinfo
 npm-debug.log*
 
 # Entorno
@@ -29,6 +30,14 @@ Thumbs.db
 
 # Herramientas locales
 .commandcode/
+
+# Material de presentación: entornos y renderizados intermedios
+presentacion/.venv/
+presentacion/.venv-video/
+presentacion/render_original/
+presentacion/render_new/
+presentacion/video/stills/
+presentacion/original_backup_EN.pptx
 
 # Modelo pesado opcional (ver README para descargarlo)
 # backend/ml/agrovision_rgb.keras
