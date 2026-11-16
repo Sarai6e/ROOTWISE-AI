@@ -305,6 +305,22 @@ Variables: `SECRET_KEY`, `JWT_SECRET_KEY`, `DATABASE_URL`, `ML_ENABLED=0`, `AUTO
 
 La guía detallada está en [`docs/guia-render-github.md`](docs/guia-render-github.md).
 
+## 8.1 Módulo de IA (opcional)
+
+El diagnóstico de hojas usa `backend/ml/agrovision_rgb.keras` (MobileNetV2, 10 clases de
+tomate, F1 macro 88.30 %). El modelo se versiona en el repo; lo que falta por defecto es
+TensorFlow, que se instala aparte:
+
+```bash
+cd backend
+.venv\Scripts\python -m pip install -r requirements-ml.txt   # Windows
+# source .venv/bin/activate && pip install -r requirements-ml.txt   # Linux/macOS
+```
+
+`iniciar-rootwise.cmd` lo instala solo la primera vez. Sin TensorFlow la app sigue
+operativa: `GET /api/health/capabilities` devuelve `model_available: false` con el motivo
+exacto, el botón de análisis se deshabilita y la pantalla indica cómo activarlo.
+
 ## 9. Modo offline
 
 - Service worker cachea el shell, los assets y las respuestas `GET /api/*` en buckets por

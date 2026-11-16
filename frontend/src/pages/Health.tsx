@@ -168,8 +168,8 @@ export default function Health() {
               <p className="flex items-center gap-1.5 font-medium"><AlertTriangle size={13} /> Módulo opcional inactivo</p>
               <p className="mt-1">{capabilities?.reason}</p>
               <p className="mt-1.5">
-                El diagnóstico requiere TensorFlow y el modelo local. En Render se mantiene
-                desactivado por peso; la app sigue operativa y este aviso es intencional.
+                Actívalo con <code className="rounded bg-ink/8 px-1">pip install -r backend/requirements-ml.txt</code>.
+                Sin él, el resto de la app sigue operativa.
               </p>
             </div>
           )}

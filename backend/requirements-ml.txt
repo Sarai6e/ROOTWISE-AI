@@ -1,0 +1,5 @@
+# Dependencias opcionales del modulo de IA (ROOTWISE HEALTH).
+# Instalar solo si se usara el diagnostico de hojas: pesa ~250 MB.
+-r requirements.txt
+tensorflow-cpu>=2.16
+pillow>=10.0

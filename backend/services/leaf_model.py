@@ -45,16 +45,23 @@ class ModelUnavailable(RuntimeError):
     pass
 
 
-def available():
+def _unavailable_reason():
     if not current_app.config.get("ML_ENABLED", True):
-        return False
+        return "El módulo de IA está desactivado en este servidor (ML_ENABLED=0)."
     if not MODEL_PATH.is_file():
-        return False
+        return f"Falta el modelo en {MODEL_PATH}."
     try:
         import tensorflow  # noqa: F401
     except Exception:  # noqa: BLE001
-        return False
-    return True
+        return (
+            "TensorFlow no está instalado en este entorno. "
+            "Ejecuta: pip install -r backend/requirements-ml.txt"
+        )
+    return None
+
+
+def available():
+    return _unavailable_reason() is None
 
 
 def capabilities():
@@ -63,9 +70,7 @@ def capabilities():
         classes = json.loads(CLASSES_PATH.read_text(encoding="utf-8"))
     return {
         "model_available": available(),
-        "reason": None if available() else (
-            "El módulo de IA está desactivado o TensorFlow no está instalado en este entorno."
-        ),
+        "reason": _unavailable_reason(),
         "model_version": MODEL_VERSION,
         "classes": [{"class": item, "label": SPANISH.get(item, item)} for item in classes],
         "metrics": {"f1_macro": 0.88298, "accuracy": 0.91426, "test_set": "PlantVillage"},

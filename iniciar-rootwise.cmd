@@ -10,6 +10,8 @@ set "PYTHON=%~dp0backend\.venv\Scripts\python.exe"
 if not exist "%PYTHON%" goto :setup
 "%PYTHON%" -c "import flask" >nul 2>&1
 if errorlevel 1 goto :setup
+"%PYTHON%" -c "import tensorflow" >nul 2>&1
+if errorlevel 1 goto :ml
 goto :run
 
 :setup
@@ -30,6 +32,17 @@ if errorlevel 1 (
   echo  Fallo la instalacion de dependencias.
   pause
   exit /b 1
+)
+
+:ml
+echo.
+echo  Instalando modulo de IA (TensorFlow). Solo la primera vez.
+"%PYTHON%" -m pip install -r requirements-ml.txt
+if errorlevel 1 (
+  echo.
+  echo  No se pudo instalar TensorFlow. La app funciona igual, sin diagnostico de hojas.
+  echo  Para reintentar: cd backend ^&^& .venv\Scripts\python -m pip install -r requirements-ml.txt
+  pause
 )
 
 :run
