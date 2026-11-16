@@ -15,6 +15,126 @@ Plataforma web de apoyo a la decisión agrícola para el reto **NASA Space Apps 
 
 ---
 
+## Recorrido visual
+
+Las capturas siguientes son de la aplicación en funcionamiento, tomadas sobre la parcela
+de demostración. Cada una explica qué hace esa pantalla y qué datos muestra.
+
+### 1. Landing pública
+
+La página de entrada presenta el reto seleccionado, los seis módulos y los límites del
+producto. Arriba se ve el globo terráqueo 3D, la franja de APIs de NASA usadas y los
+accesos a **Crear cuenta** y **Probar con demo**.
+
+![Landing de ROOTWISE AI](docs/evidencias/capturas/readme/01-landing.jpg)
+
+### 2. Registro sin correo ni DNI
+
+El alta pide usuario, contraseña y región; el correo y el DNI son opcionales. Con eso se
+crea la cuenta con rol `agricultor` y el backend emite el JWT de 12 horas.
+
+![Registro de usuario](docs/evidencias/capturas/readme/12-registro.jpg)
+
+### 3. Panel del productor
+
+Reúne en una sola vista las parcelas y su superficie calculada, la campaña activa, el
+clima de 5 años de **NASA POWER** (temperatura, lluvia anual, mínima histórica y humedad),
+la última simulación con su aptitud y la imagen **NASA Worldview** de la zona.
+
+![Panel del productor](docs/evidencias/capturas/readme/02-dashboard.jpg)
+
+### 4. Ficha de parcela
+
+Cada parcela guarda finca, área, centroide, altitud, pendiente, disponibilidad de agua y
+tipo de riego. El visor 3D muestra el polígono dibujado sobre un relieve de referencia
+(no es una imagen en vivo). Desde aquí se abre el PDF, el suelo, el clima o el simulador.
+
+![Detalle de parcela con visor 3D](docs/evidencias/capturas/readme/03-parcela.jpg)
+
+### 5. Dibujo del polígono
+
+El productor marca los vértices en el mapa y el **servidor** calcula el área y el
+centroide: el navegador no envía medidas, solo coordenadas. Ese polígono es el que después
+alimenta la consulta de clima y la imagen satelital.
+
+![Dibujo del polígono de la parcela](docs/evidencias/capturas/readme/04-dibujo-parcela.jpg)
+
+### 6. Clima observado (NASA POWER)
+
+Promedios de los últimos 5 años para la coordenada de la parcela, con gráfico mensual de
+lluvia. La pantalla declara la resolución del dato (0.5° × 0.625°, contexto regional) y
+advierte que no es una medición dentro del predio.
+
+![Clima NASA POWER de la parcela](docs/evidencias/capturas/readme/05-clima.jpg)
+
+### 7. Simulador de aptitud
+
+Se eligen hasta cultivos del catálogo y una fecha de siembra. El motor aplica primero las
+restricciones críticas y luego la puntuación multicriterio; devuelve el resultado
+(`Recomendable`, `Viable con restricciones`, `Riesgo alto`, `Información insuficiente`),
+la confianza, el desglose por criterio, los puntos débiles y la fuente de los datos.
+
+![Simulador comparando tres cultivos](docs/evidencias/capturas/readme/06-simulador.jpg)
+
+### 8. Campañas
+
+La alternativa elegida se convierte en campaña con fecha de siembra, cosecha estimada y
+ciclo. Sobre ella se registran labores, riego y cosecha, y queda como historial vivo de la
+parcela para la rotación.
+
+![Listado de campañas](docs/evidencias/capturas/readme/07-campanas.jpg)
+
+### 9. Sanidad asistida
+
+Triage de hojas de tomate con el modelo **AgroVision** (10 clases, opcional): devuelve la
+predicción principal, las dos siguientes con su probabilidad y la recomendación MIP. Si
+TensorFlow o el modelo no están, la pantalla avisa y el resto de la app sigue funcionando.
+También se registran síntomas observados por el productor.
+
+![Diagnóstico de hoja y registro de síntomas](docs/evidencias/capturas/readme/08-sanidad.jpg)
+
+### 10. NASA Earth
+
+Un solo lugar para imagen Worldview por fecha y capa, catálogo **CMR**, la Tierra de
+**EPIC/DSCOVR** e incendios de **FIRMS**. Todas las llamadas pasan por el backend, así que
+el navegador nunca recibe credenciales de NASA; la pantalla muestra el estado de cada API.
+
+![Centro de datos NASA Earth](docs/evidencias/capturas/readme/09-nasa.jpg)
+
+### 11. Administración
+
+Solo para rol `admin`: métricas de uso, gestión de usuarios y roles, y auditoría de las
+últimas acciones (login, simulaciones, campañas, diagnósticos). Abajo se ve el estado del
+módulo de IA.
+
+![Panel de administración y auditoría](docs/evidencias/capturas/readme/10-admin.jpg)
+
+### 12. Modo offline
+
+Con la red caída, el service worker sirve la app desde caché y las escrituras se guardan
+en una cola local. El banner avisa que el cambio quedó en el dispositivo y se sincronizará
+al volver Internet, de forma automática o con el botón **Sincronizar**.
+
+![Guardado sin conexión con cola de sincronización](docs/evidencias/capturas/readme/11-offline.jpg)
+
+### 13. Idiomas
+
+Interfaz en español, inglés, runasimi (quechua), kichwa amazónico y asháninka. Las
+traducciones viajan en el bundle, por lo que también funcionan sin conexión.
+
+| Inglés | Runasimi (quechua) |
+|---|---|
+| ![Interfaz en inglés](docs/evidencias/capturas/readme/13-idioma-ingles.jpg) | ![Interfaz en quechua](docs/evidencias/capturas/readme/14-idioma-quechua.jpg) |
+
+| Kichwa amazónico | Asháninka |
+|---|---|
+| ![Interfaz en kichwa amazónico](docs/evidencias/capturas/readme/15-idioma-kichwa-amazonico.jpg) | ![Interfaz en asháninka](docs/evidencias/capturas/readme/16-idioma-ashaninka.jpg) |
+
+Las capturas originales en tamaño completo están en
+[`docs/evidencias/capturas/`](docs/evidencias/capturas/).
+
+---
+
 ## 1. El reto
 
 Los agricultores enfrentan temperaturas cambiantes, lluvias irregulares, escasez de agua y
@@ -66,7 +186,7 @@ rootwise-ai/
 │   │                  # reports, admin, nasa
 │   ├── services/      # geo, nasa_power, nasa_earth, suitability,
 │   │                  # rotation, leaf_model, pdf
-│   ├── data/          # crops.seed.json (55 cultivos), rotation_rules.json
+│   ├── data/          # crops.seed.json (54 cultivos), rotation_rules.json
 │   ├── ml/            # agrovision_rgb.keras + clases.json (opcional)
 │   └── tests/
 ├── frontend/
@@ -123,6 +243,11 @@ ruleset (`1.0.0`) y la fuente de cada variable para poder reproducirse.
 Todas las claves viven en el servidor. El navegador nunca recibe credenciales de NASA.
 
 ## 7. Ejecutar en local
+
+### Atajo en Windows
+
+Doble clic en `iniciar-rootwise.cmd`: crea el entorno si falta, siembra la base y abre
+`http://127.0.0.1:5055` sirviendo API + interfaz en el mismo puerto.
 
 ### Backend
 

@@ -27,5 +27,8 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Herramientas locales
+.commandcode/
+
 # Modelo pesado opcional (ver README para descargarlo)
 # backend/ml/agrovision_rgb.keras

@@ -90,10 +90,11 @@ def _load():
 def predict(image_bytes):
     from io import BytesIO
 
+    model, classes = _load()
+
     import numpy as np
     from PIL import Image, ImageOps, UnidentifiedImageError
 
-    model, classes = _load()
     try:
         with Image.open(BytesIO(image_bytes)) as photo:
             if photo.width * photo.height > 32_000_000:

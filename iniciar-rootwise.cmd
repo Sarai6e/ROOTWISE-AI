@@ -6,9 +6,33 @@ set "ML_ENABLED=1"
 set "PORT=5055"
 set "HOST=127.0.0.1"
 
-set "PYTHON=%~dp0..\..\web\.venv\Scripts\python.exe"
-if not exist "%PYTHON%" set "PYTHON=python"
+set "PYTHON=%~dp0backend\.venv\Scripts\python.exe"
+if not exist "%PYTHON%" goto :setup
+"%PYTHON%" -c "import flask" >nul 2>&1
+if errorlevel 1 goto :setup
+goto :run
 
+:setup
+echo.
+echo  Preparando entorno de Python...
+where python >nul 2>&1
+if errorlevel 1 (
+  echo  No se encontro Python 3.11+ en el PATH.
+  echo  Instalalo desde https://www.python.org/downloads/ y vuelve a ejecutar.
+  pause
+  exit /b 1
+)
+if not exist "%PYTHON%" python -m venv "%~dp0backend\.venv"
+"%PYTHON%" -m pip install --upgrade pip
+"%PYTHON%" -m pip install -r requirements.txt
+if errorlevel 1 (
+  echo.
+  echo  Fallo la instalacion de dependencias.
+  pause
+  exit /b 1
+)
+
+:run
 echo.
 echo  ROOTWISE AI
 echo  Iniciando servidor en http://127.0.0.1:5055
@@ -24,9 +48,9 @@ start "" /b cmd /c "timeout /t 4 >nul & start "" http://127.0.0.1:5055"
 if errorlevel 1 (
   echo.
   echo No se pudo iniciar con "%PYTHON%".
-  echo Instala Python 3.11+ o ejecuta manualmente:
+  echo Ejecuta manualmente:
   echo   cd backend
-  echo   python wsgi.py
+  echo   .venv\Scripts\python wsgi.py
   pause
 )
 endlocal
